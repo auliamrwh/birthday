@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ulang Tahun Pacarku</title>
+    <style>
+      /* Resetting some default styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif; /* Font modern dan nyaman */
+        background-color: #fef9f3; /* Warna latar belakang pastel */
+        color: #4a4a4a; /* Warna teks utama yang lembut */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #fef9f3, #f6d1b2);
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #ff6f61; /* Warna cerah yang lembut */
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        color: #7f8c8d; /* Warna teks netral */
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .hidden-content {
+        display: none;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .message {
+        font-size: 24px;
+        font-style: italic;
+        color: #3498db;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .spotify-container {
+        margin-top: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        border: none;
+        height: 352px;
+        border-radius: 12px;
+      }
+
+      .words {
+        font-size: 20px;
+        margin-top: 30px;
+        color: #e74c3c;
+        font-weight: 600;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .btn-reveal {
+        background-color: #ff6f61; /* Warna tombol yang cerah */
+        color: white;
+        padding: 15px 30px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .btn-reveal:hover {
+        background-color: #e74c3c; /* Hover effect tombol */
+      }
+
+      /* Gallery styling */
+      .image-gallery {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .image-gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .image-gallery img:hover {
+        transform: scale(1.1);
+      }
+      /* Tambahan CSS khusus untuk galeri potret */
+      .portrait-gallery img {
+        width: 150px;
+        height: 225px;
+      }
+
+      /* Media query for responsiveness */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+
+        .message {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+
+        .words {
+          font-size: 18px;
+          padding: 12px;
+        }
+
+        .image-gallery img {
+          width: 120px;
+          height: 120px;
+        }
+
+        .portrait-gallery img {
+          width: 120px;
+          height: 180px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page1">
+      <h1>Ulang Tahun Pacarku!</h1>
+      <p>Ayo klik tombol untuk membuka kejutan!</p>
+
+      <!-- Tombol untuk membuka konten tersembunyi -->
+      <button class="btn-reveal" onclick="revealContent()">
+        Klik untuk Kejutan!
+      </button>
+
+      <!-- Galeri Foto untuk halaman pertama (3 foto) -->
+      <div class="image-gallery">
+        <img
+          src="https://i.pinimg.com/736x/ae/96/45/ae964592b0520dc5ad514e1f683b92cc.jpg"
+          alt="Foto 1"
+        />
+        <img
+          src="https://i.pinimg.com/736x/b1/53/9b/b1539b72db8911617a8465e29e25dd5c.jpg"
+          alt="Foto 2"
+        />
+        <img
+          src="https://i.pinimg.com/736x/3b/35/58/3b355846bdeed302b0de1dda1953b6aa.jpg"
+          alt="Foto 3"
+        />
+      </div>
+    </div>
+
+    <div id="page2" class="hidden-content">
+      <p class="message">
+        Selamat ulang tahun, sayang! Aku sangat mencintaimu.
+      </p>
+      <div class="spotify-container">
+        <!-- Embed musik Spotify -->
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/track/4PwWESSlTwzvw9B7bmtTLS?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="words">
+        <p>
+          "Kamu adalah kebahagiaan terbesar dalam hidupku. Semoga hari ulang
+          tahunmu dipenuhi dengan cinta, tawa, dan kebahagiaan yang tak
+          terhingga!"
+        </p>
+      </div>
+
+      <!-- Ganti hanya bagian galeri di page2 seperti berikut -->
+      <!-- Galeri Foto untuk halaman kedua (4 foto potret) -->
+      <div class="image-gallery portrait-gallery">
+        <img
+          src="https://i.pinimg.com/736x/17/9f/7f/179f7ff2c8b1b5d8fa7fae99b3e9d5d8.jpg"
+          alt="Foto 4"
+        />
+        <img
+          src="https://i.pinimg.com/736x/91/98/b9/9198b936b2ccb0969625f23eb1c54001.jpg"
+          alt="Foto 5"
+        />
+        <img
+          src="https://i.pinimg.com/736x/d7/e4/05/d7e4050c0f67f3da2bcc395656690f85.jpg"
+          alt="Foto 6"
+        />
+        <img
+          src="https://i.pinimg.com/736x/da/70/a8/da70a87b69b7f0b42fd0872475ca4d96.jpg"
+          alt="Foto 7"
+        />
+      </div>
+    </div>
+
+    <script>
+      // Fungsi untuk menampilkan konten tersembunyi setelah tombol diklik
+      function revealContent() {
+        document.getElementById("page1").style.display = "none"; // Sembunyikan halaman pertama
+        document.getElementById("page2").style.display = "block"; // Tampilkan halaman kedua
+      }
+    </script>
+  </body>
+</html>
